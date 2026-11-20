@@ -1,0 +1,13 @@
+{
+  "subagents": {
+    "agentOverrides": {
+      "scout": {
+        "model": "claude-sonnet-5-5",
+        "tools": ["read", "grep", "find", "ls", "bash", "contact_supervisor"]
+      },
+      "researcher": {
+        "model": "claude-sonnet-5-5"
+      }
+    }
+  }
+}
