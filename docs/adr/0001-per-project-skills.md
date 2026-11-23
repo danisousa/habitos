@@ -1,0 +1,3 @@
+# Each project owns its skills
+
+Habitos keeps its full skill set in `.agents/skills/`, with no shared skills repo and no global skills directory; Fintrackr and NornAI do the same in their own harnesses. A shared `agent-skills` repo loaded from a global path was designed and dropped: Fintrackr has a second developer who must be free to adapt his own skills, and any global copy would also shadow or drift from the per-repo copies. The cost is accepted: an improvement to a skill in one project reaches the others only by copying it by hand, and adapted skills stay in sync with `mattpocock/skills` per project through `upstream-skills`.
