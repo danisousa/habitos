@@ -49,3 +49,4 @@ Used by `/skill:wayfinder`. The **map** is a single issue with **child** issues 
 - **Type**: `feat` `fix` `chore` `docs` `refactor` `perf` `test`
 - **Packages**: none yet — single package. Add them here when the repo grows packages.
 - **Agent-ready**: `ready-for-agent`
+- **Harness**: `harness` — friction with Pi or the agent setup, not with the app. Filed by `/skill:retro`, or straight away when the user says "anota: …".
