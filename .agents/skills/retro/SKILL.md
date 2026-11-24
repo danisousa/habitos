@@ -6,7 +6,7 @@ metadata:
   upstream:
     repo: mattpocock/skills
     path: skills/engineering/retro
-    commit: 4ae2317
+    commit: abeeaf9
 ---
 
 The user has asked for a **retrospective**. You are suggesting improvements to the coding agent's **environment** to improve future runs.

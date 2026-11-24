@@ -6,7 +6,7 @@ metadata:
   upstream:
     repo: mattpocock/skills
     path: skills/engineering/implement
-    commit: 4ae2317
+    commit: abeeaf9
 ---
 
 Implement the work described by the user in the spec or tickets.

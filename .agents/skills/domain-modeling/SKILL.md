@@ -5,7 +5,7 @@ metadata:
   upstream:
     repo: mattpocock/skills
     path: skills/engineering/domain-modeling
-    commit: 4ae2317
+    commit: abeeaf9
 ---
 
 # Domain Modeling

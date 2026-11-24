@@ -5,7 +5,7 @@ metadata:
   upstream:
     repo: mattpocock/skills
     path: skills/productivity/grilling
-    commit: 4ae2317
+    commit: abeeaf9
 ---
 
 Interview me relentlessly about every aspect of this until we reach a shared understanding. Walk down each branch of the decision tree, resolving dependencies between decisions one-by-one. For each question, provide your recommended answer.

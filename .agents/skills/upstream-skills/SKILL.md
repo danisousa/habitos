@@ -32,7 +32,8 @@ Compare upstream against itself, from `commit` to HEAD. The local copy differs o
 1. List what moved:
 
    ```bash
-   for f in $(grep -l '^  upstream:' .agents/skills/*/SKILL.md); do
+   for f in .agents/skills/*/SKILL.md; do
+     awk 'NR>1 && /^---$/{exit 1} /^  upstream:/{exit 0}' "$f" || continue
      src=$(awk '/^    path:/{print $2; exit}' "$f")
      commit=$(awk '/^    commit:/{print $2; exit}' "$f")
      echo "== $f $commit"

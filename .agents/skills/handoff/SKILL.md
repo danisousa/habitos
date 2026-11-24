@@ -7,10 +7,10 @@ metadata:
   upstream:
     repo: mattpocock/skills
     path: skills/productivity/handoff
-    commit: 697d4ce
+    commit: abeeaf9
 ---
 
-Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's OS - not the current workspace.
+Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's OS (`$TMPDIR`, else `/tmp`; `%TEMP%` on Windows) - not the current workspace.
 
 Include a "suggested skills" section in the document, which suggests skills that the agent should invoke.
 
