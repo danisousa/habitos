@@ -12,6 +12,10 @@ _Avoid_: Routine, daily
 The rule that says when a Habit is due: every day, on fixed weekdays, or a number of times per week on any days.
 _Avoid_: Frequency, recurrence
 
+**Game date**:
+The day an action counts for: local time minus 4 hours, so a day runs from 04:00 to 04:00. Fixed when the action is recorded and never moves backwards. Weeks run from Monday 04:00 to Monday 04:00.
+_Avoid_: Day, calendar date
+
 **Streak**:
 The count of consecutive due periods a Habit was fulfilled, in its Schedule's unit: due days for daily and fixed-weekday Habits, weeks for times-per-week Habits.
 _Avoid_: Chain, combo
@@ -25,7 +29,7 @@ A one-off real-life activity the player completes once and never repeats. Its si
 _Avoid_: Task, to-do, errand, one-off habit
 
 **Run**:
-A week-long expedition through a map of Nodes, ending in a boss. It closes at the end of the week whether or not the boss was reached, and pays out Essence.
+A week-long expedition through a map of Nodes, ending in a boss. It opens and closes on Monday at 04:00, whether or not the boss was reached, and pays out Essence.
 _Avoid_: Season, game, round
 
 **Node**:
