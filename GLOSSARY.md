@@ -29,7 +29,7 @@ A week-long expedition through a map of Nodes, ending in a boss. It closes at th
 _Avoid_: Season, game, round
 
 **Node**:
-One stop on a Run's map: a fight, event, shop or rest. Playing one costs a Step.
+One stop on a Run's map: a fight, event, shop, rest or the Boss. Playing one costs a Step.
 _Avoid_: Room, level, encounter
 
 **Step**:
@@ -51,6 +51,26 @@ _Avoid_: Upgrade, perk
 **Hero**:
 The player's character inside a Run: it explores the map, fights and holds the only health bar. It grows within a Run through Gold.
 _Avoid_: Avatar, player character
+
+**Item**:
+A passive effect the Hero carries in one of a few slots for the rest of the Run. It can be upgraded once at a rest.
+_Avoid_: Relic, equipment, gear
+
+**Consumable**:
+A single-use effect the Hero spends before a fight or event to change its outcome.
+_Avoid_: Potion, charm, one-shot item
+
+**Trait**:
+A visible rule an enemy fights by, such as striking first or ignoring the first hit. Ordinary enemies have one; the Boss has two or three.
+_Avoid_: Modifier, affix, ability
+
+**Boss**:
+The final Node of a Run, shown with its Traits from the Run's first day.
+_Avoid_: Final enemy, elite
+
+**Preview**:
+The exact outcome of a fight, shown before the player commits to it.
+_Avoid_: Forecast, simulation, prediction
 
 **Pet**:
 The untouchable companion that follows the Hero through every Run. It never takes damage and has no needs; it grows only from XP.
