@@ -57,8 +57,12 @@ The untouchable companion that follows the Hero through every Run. It never take
 _Avoid_: Creature, familiar, mascot
 
 **XP**:
-What the Pet earns from tasks completed in pi. It only ever goes up and only advances the Pet's Stage.
+What the Pet earns, a fixed amount per Pi task. It only ever goes up and only advances the Pet's Stage.
 _Avoid_: Experience points, Gold
+
+**Pi task**:
+A finished, non-aborted request in a top-level pi session during which pi itself successfully edited or wrote at least one file. Subagent runs are not Pi tasks.
+_Avoid_: Job, agent run, prompt
 
 **Stage**:
 One of a few discrete steps of the Pet's growth. Each Stage persists across Runs, changes the Pet's look and opens one Ability.
