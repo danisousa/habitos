@@ -21,7 +21,7 @@ A consumable earned in the game that covers one missed period of a Streak. It is
 _Avoid_: Shield, joker, streak saver
 
 **Quest**:
-A one-off real-life activity the player completes once and never repeats. It may carry an optional due date; finishing by it earns a bonus, missing it costs nothing.
+A one-off real-life activity the player completes once and never repeats. Its size (S, M or L) measures how much the player resists doing it, not how long it takes, and can only go down after creation. It pays Gold by size only once matured: created at least a day before it is completed. It may carry an optional due date, which can only move earlier; finishing by it earns a small flat bonus, missing it costs nothing.
 _Avoid_: Task, to-do, errand, one-off habit
 
 **Run**:
