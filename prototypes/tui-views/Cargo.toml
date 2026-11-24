@@ -1,0 +1,8 @@
+[package]
+name = "habitos-tui-prototype"
+version = "0.1.0"
+edition = "2024"
+default-run = "v2_friendly"
+
+[dependencies]
+ratatui = "0.30.2"
