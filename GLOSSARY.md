@@ -47,3 +47,23 @@ _Avoid_: Meta-currency, prestige points
 **Unlock**:
 A permanent addition to the pool a Run draws from: Node types, items, events, pet cosmetics or codex entries. Never raw power.
 _Avoid_: Upgrade, perk
+
+**Hero**:
+The player's character inside a Run: it explores the map, fights and holds the only health bar. It grows within a Run through Gold.
+_Avoid_: Avatar, player character
+
+**Pet**:
+The untouchable companion that follows the Hero through every Run. It never takes damage and has no needs; it grows only from XP.
+_Avoid_: Creature, familiar, mascot
+
+**XP**:
+What the Pet earns from tasks completed in pi. It only ever goes up and only advances the Pet's Stage.
+_Avoid_: Experience points, Gold
+
+**Stage**:
+One of a few discrete steps of the Pet's growth. Each Stage persists across Runs, changes the Pet's look and opens one Ability.
+_Avoid_: Level, evolution, form
+
+**Ability**:
+A Pet power opened by a Stage. The player brings one Ability into each Run, chosen at its start; Abilities add choices, never raw power.
+_Avoid_: Skill, perk, move
