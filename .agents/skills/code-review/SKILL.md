@@ -5,7 +5,7 @@ metadata:
   upstream:
     repo: mattpocock/skills
     path: skills/engineering/code-review
-    commit: 4ae2317
+    commit: abeeaf9
 ---
 
 Two-axis review of the diff between `HEAD` and a fixed point the user supplies:

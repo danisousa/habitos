@@ -6,7 +6,7 @@ metadata:
   upstream:
     repo: mattpocock/skills
     path: skills/engineering/to-spec
-    commit: 4ae2317
+    commit: abeeaf9
 ---
 
 This skill takes the current conversation context and codebase understanding and produces a spec (you may know this document as a PRD). Do NOT interview the user — just synthesize what you already know.

@@ -6,7 +6,7 @@ metadata:
   upstream:
     repo: mattpocock/skills
     path: skills/engineering/to-tickets
-    commit: 4ae2317
+    commit: abeeaf9
 ---
 
 # To Tickets

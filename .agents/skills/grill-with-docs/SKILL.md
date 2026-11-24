@@ -6,7 +6,7 @@ metadata:
   upstream:
     repo: mattpocock/skills
     path: skills/engineering/grill-with-docs
-    commit: 4ae2317
+    commit: abeeaf9
 ---
 
 Read the `grilling` and `domain-modeling` skills (`.agents/skills/<name>/SKILL.md`) and follow both.
