@@ -1,8 +1,7 @@
 mod support;
 
-use habitos::Game;
 use rusqlite::Connection;
-use support::{clock_at, date, open_at};
+use support::{clock_at, date, open, open_at};
 
 #[test]
 fn one_minute_before_four_counts_for_the_previous_game_date() {
@@ -33,13 +32,12 @@ fn the_last_seen_game_date_survives_a_restart_with_the_clock_moved_back() {
     let path = std::env::temp_dir().join(format!("habitos-calendar-{}.db", std::process::id()));
     let _ = std::fs::remove_file(&path);
     let clock = clock_at("2025-03-05T10:00:00+01:00");
-    Game::open(Connection::open(&path).unwrap(), Box::new(clock.clone()))
-        .unwrap()
+    open(Connection::open(&path).unwrap(), &clock)
         .today()
         .unwrap();
 
     clock.set("2025-03-04T10:00:00+01:00");
-    let mut game = Game::open(Connection::open(&path).unwrap(), Box::new(clock)).unwrap();
+    let mut game = open(Connection::open(&path).unwrap(), &clock);
     let today = game.today().unwrap();
     std::fs::remove_file(&path).unwrap();
     assert_eq!(today, date("2025-03-05"));

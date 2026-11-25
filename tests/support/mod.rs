@@ -4,7 +4,7 @@ use std::cell::Cell;
 use std::rc::Rc;
 
 use chrono::{DateTime, FixedOffset, NaiveDate};
-use habitos::{Clock, Game};
+use habitos::{Clock, Game, SeedSource};
 use rusqlite::Connection;
 
 #[derive(Clone)]
@@ -34,12 +34,19 @@ pub fn clock_at(at: &str) -> FakeClock {
     FakeClock(Rc::new(Cell::new(instant(at))))
 }
 
+pub struct FixedSeed(pub u64);
+
+impl SeedSource for FixedSeed {
+    fn next_seed(&mut self) -> u64 {
+        self.0
+    }
+}
+
+pub fn open(conn: Connection, clock: &FakeClock) -> Game {
+    Game::open(conn, Box::new(clock.clone()), Box::new(FixedSeed(42))).unwrap()
+}
+
 pub fn open_at(at: &str) -> (Game, FakeClock) {
     let clock = clock_at(at);
-    let game = Game::open(
-        Connection::open_in_memory().unwrap(),
-        Box::new(clock.clone()),
-    )
-    .unwrap();
-    (game, clock)
+    (open(Connection::open_in_memory().unwrap(), &clock), clock)
 }

@@ -9,6 +9,10 @@ pub trait Clock {
     fn now(&self) -> DateTime<FixedOffset>;
 }
 
+pub trait SeedSource {
+    fn next_seed(&mut self) -> u64;
+}
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Schedule {
     EveryDay,
@@ -42,13 +46,20 @@ pub struct HabitRow {
 pub struct Game {
     store: Store,
     clock: Box<dyn Clock>,
+    #[expect(dead_code, reason = "first read by the Run engine in #36")]
+    seeds: Box<dyn SeedSource>,
 }
 
 impl Game {
-    pub fn open(conn: Connection, clock: Box<dyn Clock>) -> Result<Game> {
+    pub fn open(
+        conn: Connection,
+        clock: Box<dyn Clock>,
+        seeds: Box<dyn SeedSource>,
+    ) -> Result<Game> {
         Ok(Game {
             store: Store::open(conn)?,
             clock,
+            seeds,
         })
     }
 
