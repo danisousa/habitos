@@ -1,13 +1,11 @@
 mod support;
 
 use habitos::Schedule;
-use support::{clock_at, open_at};
-
-use habitos::Game;
 use rusqlite::Connection;
+use support::{clock_at, open, open_at};
 
 #[test]
-fn a_daily_habit_marked_done_shows_as_done_today() {
+fn an_every_day_habit_marked_done_shows_as_done_today() {
     let (mut game, _clock) = open_at("2025-03-05T10:00:00+01:00");
     let read = game.add_habit("Read", Schedule::EveryDay).unwrap();
     game.mark_habit_done_today(read).unwrap();
@@ -35,12 +33,12 @@ fn habits_and_marks_persist_across_restarts() {
     let _ = std::fs::remove_file(&path);
     let clock = clock_at("2025-03-05T10:00:00+01:00");
 
-    let mut game = Game::open(Connection::open(&path).unwrap(), Box::new(clock.clone())).unwrap();
+    let mut game = open(Connection::open(&path).unwrap(), &clock);
     let read = game.add_habit("Read", Schedule::EveryDay).unwrap();
     game.mark_habit_done_today(read).unwrap();
     drop(game);
 
-    let mut game = Game::open(Connection::open(&path).unwrap(), Box::new(clock)).unwrap();
+    let mut game = open(Connection::open(&path).unwrap(), &clock);
     let habits = game.habits().unwrap();
     std::fs::remove_file(&path).unwrap();
     assert_eq!(habits[0].name, "Read");
